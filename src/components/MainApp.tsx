@@ -658,26 +658,6 @@ export default function MainApp() {
       </BottomSheet>
 
       <NavigationMenu isOpen={showMenu} onClose={() => setShowMenu(false)} />
-
-      <style jsx global>{`
-        * {
-          -webkit-tap-highlight-color: transparent;
-        }
-
-        @keyframes slideUp {
-          from { transform: translateY(100%); opacity: 0; }
-          to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.5; }
-        }
-
-        .animate-pulse {
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-      `}</style>
     </div>
   );
 }

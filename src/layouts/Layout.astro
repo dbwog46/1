@@ -17,6 +17,7 @@ const { title = '脸书小助手' } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="description" content="专为 Facebook 注册设计的身份生成工具，智能生成符合真实用户特征的姓名、生日、手机号、邮箱等信息，支持全球100+国家地区，提高账号注册成功率" />
     <meta name="keywords" content="Facebook创号,FB注册助手,Facebook账号生成器,FB身份生成,社交媒体注册工具,Facebook注册信息,临时邮箱,测试账号" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="FB创号小助手" />
@@ -35,7 +36,10 @@ const { title = '脸书小助手' } = Astro.props;
       (function() {
         var script = document.createElement('script');
         script.charset = 'UTF-8';
-        script.src = '//sdk.51.la/js-sdk-pro.min.js';
+        script.src = 'https://sdk.51.la/js-sdk-pro.min.js';
+        script.onerror = function() {
+          console.log('Analytics script failed to load');
+        };
         script.onload = function() {
           if (window.LA) {
             LA.init({

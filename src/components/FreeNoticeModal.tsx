@@ -177,41 +177,6 @@ export const FreeNoticeModal = memo(() => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        
-        @keyframes powerZoomIn {
-          0% {
-            transform: scale(0.7);
-            opacity: 0;
-          }
-          50% {
-            transform: scale(1.05);
-            opacity: 1;
-          }
-          70% {
-            transform: scale(0.98);
-          }
-          100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-        }
-        
-        @supports (padding-bottom: env(safe-area-inset-bottom)) {
-          .pb-safe {
-            padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
-          }
-        }
-      `}</style>
     </div>
   );
 });

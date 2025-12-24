@@ -87,13 +87,6 @@ const DeleteConfirmModal = memo(({ isOpen, mailName, onConfirm, onCancel }: Dele
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes scaleIn {
-          from { transform: scale(0.8); opacity: 0; }
-          to { transform: scale(1); opacity: 1; }
-        }
-      `}</style>
     </div>
   );
 });

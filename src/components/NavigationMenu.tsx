@@ -93,13 +93,6 @@ export const NavigationMenu = memo(({ isOpen, onClose }: NavigationMenuProps) =>
           })}
         </div>
       </div>
-
-      <style jsx global>{`
-        @keyframes slideInRight {
-          from { transform: translateX(100%); opacity: 0; }
-          to { transform: translateX(0); opacity: 1; }
-        }
-      `}</style>
     </div>
   );
 });
